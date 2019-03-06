@@ -1,0 +1,44 @@
+%
+% ACPR 2015 template adaptation
+%! TEX root = master.tex
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%% Latex documents that need direct input
+\input{latex/article/package.tex}        % contains the latex packages
+\input{content/article/frontmatter.tex}             % contains the Title and Autor info
+\input{content/article/acronym.tex} 
+
+\acprfinalcopy % *** Uncomment this line for the final submission
+
+\def\acprPaperID{****} % *** Enter the acpr Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifacprfinal\pagestyle{empty}\fi
+\bibliography{./content/bibliography.bib}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+Detection of skin cancer in time used to be a challenge over decades. In clinical circumstances, a couple of imaging techniques aims to improve early recognition of malignant pathologies. For instance, Reflectance Confocal Microscopy modality is a suitable technique for skin pathologies diseases in clinical context. This study intends to classify these images under three categories: Healthy, Benign and Malignant Lentigo. First, we reproduce a recent work based on wavelets descriptors and apply it to these three classes. Then, we introduce two other extraction ways based on Haralick textures descriptors and a Deep features extraction.
+\end{abstract}
+
+%% Incldue the content without .tex extension
+\include*{content/article/introduction}
+\include*{content/article/methods}
+\include*{content/article/results}
+\include*{content/article/conclusion}
+
+\begin{aknowledgements}
+This research was supported by the Conseil Regional de Bourgogne Franche-Comte, France and the European Regional Development Fund (ERDF).\par
+We thank Dr. Perrot and Dr. Cinotti for their work on their dataset and for their permission to use it.\par
+\end{aknowledgements}
+
+{\small
+\printbibliography
+}
+\end{document}
